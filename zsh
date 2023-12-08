@@ -1,0 +1,1 @@
+/home/flero/.config/zsh
