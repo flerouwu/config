@@ -1,1 +1,94 @@
-/home/flero/.config/VSCodium/User/settings.json
+{
+    // Online Services
+    "git.autofetch": "all",
+    "workbench.enableExperiments": false,
+
+    // Theme / Fonts
+    "window.titleBarStyle": "custom",
+    "window.customMenuBarAltFocus": false, // Fixes Alt+Shift+F for formatting.
+    "window.enableMenuBarMnemonics": false,
+    "workbench.iconTheme": "vscode-icons",
+    "editor.fontSize": 18,
+    "editor.fontFamily": "'0xProto', 'Comic Sans'",
+    "terminal.integrated.cursorStyle": "underline",
+    "terminal.integrated.cursorStyleInactive": "underline",
+    "workbench.editor.labelFormat": "medium",
+
+    // Misc
+    "vscord.app.name": "VSCodium",
+    "vsicons.dontShowNewVersionMessage": true,
+
+    // Formatting Stuff
+    // https://github.com/flerouwu/prettier-config
+    "javascript.format.semicolons": "remove",
+    "typescript.format.semicolons": "remove",
+    "prettier.tabWidth": 4,
+    "prettier.semi": false,
+    "prettier.printWidth": 80,
+    "prettier.bracketSameLine": true,
+
+    // Security and Workspace Configuration
+    "security.workspace.trust.untrustedFiles": "open",
+    "workbench.startupEditor": "readme",
+    "files.autoSave": "afterDelay",
+
+    // Rulers
+    "editor.rulers": [80],
+
+    // Macros - https://marketplace.visualstudio.com/items?itemName=geddski.macros
+    "macros": {
+        // Organize Imports and Format Document
+        "organisedFormat": [
+            "editor.action.formatDocument",
+            "editor.action.organizeImports"
+        ]
+    },
+
+    // Cascading Style Sheet
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    // Docker Compose Configuration
+    "[dockercompose]": {
+        "editor.tabSize": 4
+    },
+
+    // Hypertext Markup Language
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    // JavaScript
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    // JSON
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    // JSON with Comments (e.g. vscode's settings.json)
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    // Typescript
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    // Typescript JSX
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    // YAML
+    "[yaml]": {
+        "editor.tabSize": 4
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+}

@@ -1,1 +1,7 @@
-/home/flero/.config/VSCodium/User/keybindings.json
+[
+	{
+		"key": "alt+shift+f",
+		"command": "macros.organisedFormat",
+		"when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+	}
+]
