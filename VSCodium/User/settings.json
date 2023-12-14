@@ -17,6 +17,7 @@
     // Misc
     "vscord.app.name": "VSCodium",
     "vsicons.dontShowNewVersionMessage": true,
+    "editor.linkedEditing": true,
 
     // Formatting Stuff
     // https://github.com/flerouwu/prettier-config
@@ -38,56 +39,59 @@
     // Macros - https://marketplace.visualstudio.com/items?itemName=geddski.macros
     "macros": {
         // Organize Imports and Format Document
+        // Bound to Alt + Shift + F
         "organisedFormat": [
             "editor.action.formatDocument",
             "editor.action.organizeImports"
         ]
     },
 
-    // Cascading Style Sheet
+    // Cascading Style Sheet (*.css)
     "[css]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
 
-    // Docker Compose Configuration
+    // Docker Compose Configuration (docker-compose.yml)
     "[dockercompose]": {
         "editor.tabSize": 4
     },
 
-    // Hypertext Markup Language
+    // Hypertext Markup Language (*.html, *.htm, *.shtml)
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
 
-    // JavaScript
+    // JavaScript (*.js, *.cjs, *.mjs)
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
 
-    // JSON
+    // JSON (*.json)
     "[json]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
 
-    // JSON with Comments (e.g. vscode's settings.json)
+    // JSON with Comments (e.g. vscode's settings.json) (*.jsonc, *.json5)
     "[jsonc]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
 
-    // Typescript
+    // Typescript (*.ts)
     "[typescript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
 
-    // Typescript JSX
+    // Typescript JSX (*.tsx)
     "[typescriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
 
-    // YAML
+    // YAML (*.yaml, *.yml)
     "[yaml]": {
         "editor.tabSize": 4
     },
+
+    // Markdown (*.md)
     "[markdown]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     }

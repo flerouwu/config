@@ -13,3 +13,6 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun" # Completions
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# rbenv (Ruby)
+eval "$(rbenv init - zsh)"

@@ -7,6 +7,7 @@
 # Files - <original-path>:<absolute-git-path>
 FILES=(
     "/etc/paru.conf:etc/paru.conf"
+    "$HOME/.vimrc:.vimrc"
 
     # Kitty
     "$HOME/.config/kitty/kitty.conf:kitty/kitty.conf"
@@ -21,7 +22,7 @@ FILES=(
     "$HOME/.config/VSCodium/User/settings.json:VSCodium/User/settings.json"
 
     # ZSH
-    "$HOME/.config/zsh/:zsh/"
+    "$HOME/.config/zsh/:zsh"
     "$HOME/.zshrc:.zshrc"
 )
 
