@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # This is a simple file to copy my config over.
 # Basically just stops me from having to enter a bunch of
@@ -7,7 +7,6 @@
 # Files - <original-path>:<absolute-git-path>
 FILES=(
     "/etc/paru.conf:etc/paru.conf"
-    "$HOME/.vimrc:.vimrc"
 
     # Kitty
     "$HOME/.config/kitty/kitty.conf:kitty/kitty.conf"
@@ -24,6 +23,10 @@ FILES=(
     # ZSH
     "$HOME/.config/zsh/:zsh"
     "$HOME/.zshrc:.zshrc"
+
+    # Neovim
+    "$HOME/.config/nvim/init.lua:nvim/init.lua"
+    "$HOME/.config/nvim/lua:nvim/lua/"
 )
 
 # Copy Files - Overwrite if existing
@@ -31,7 +34,7 @@ for file in "${FILES[@]}"; do
     LOCATION="${file%%:*}"
     DESTINATION="${file#*:}"
 
-    printf "Copying $LOCATION to $DESTINATION\n"
+    printf "Copying %s to %s\n" "$LOCATION" "$DESTINATION"
     mkdir --parents "$(dirname "$DESTINATION")"
     cp --force --recursive "$LOCATION" "$DESTINATION"
 done

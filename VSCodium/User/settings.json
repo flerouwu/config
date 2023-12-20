@@ -13,11 +13,15 @@
     "terminal.integrated.cursorStyle": "underline",
     "terminal.integrated.cursorStyleInactive": "underline",
     "workbench.editor.labelFormat": "medium",
+    "workbench.colorTheme": "Tokyo Night",
+    "explorer.fileNesting.enabled": true,
 
     // Misc
     "vscord.app.name": "VSCodium",
     "vsicons.dontShowNewVersionMessage": true,
+    "mesonbuild.downloadLanguageServer": true,
     "editor.linkedEditing": true,
+    "git.enableSmartCommit": true,
 
     // Formatting Stuff
     // https://github.com/flerouwu/prettier-config
@@ -27,6 +31,10 @@
     "prettier.semi": false,
     "prettier.printWidth": 80,
     "prettier.bracketSameLine": true,
+
+    // Linting
+    "rust-analyzer.check.command": "clippy",
+    "rust-analyzer.checkOnSave": true,
 
     // Security and Workspace Configuration
     "security.workspace.trust.untrustedFiles": "open",
@@ -94,5 +102,5 @@
     // Markdown (*.md)
     "[markdown]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    },
 }

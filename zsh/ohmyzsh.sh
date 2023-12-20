@@ -1,7 +1,5 @@
 #!/usr/bin/zsh
 
-#!/usr/bin/zsh
-
 export ZSH="$HOME/.oh-my-zsh"
 
 # Uncomment one of the following lines to change the auto-update behavior

@@ -9,6 +9,7 @@
 [Kitty]: https://sw.kovidgoyal.net/kitty/
 [ZSH]: https://zsh.org/
 [Oh My ZSH]: https://github.com/ohmyzsh/ohmyzsh/
+[Neovim]: https://neovim.io/
 [arch]: https://archlinux.org/
 [Paru]: https://github.com/Morganamilo/paru
 
@@ -30,6 +31,7 @@ Primarily, I use the [0xProto] monospaced font for editing code and for my syste
 -   [VSCodium] (Code Editor)
 -   [Kitty] (Terminal Emulator)
 -   [ZSH] and [Oh My ZSH]
+-   [Neovim]
 -   [Paru] and Pacman (i use [arch] btw)
 
 ## Miscellanous Configs
