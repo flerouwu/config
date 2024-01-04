@@ -1,14 +1,14 @@
 local fn = vim.fn
 local cmd = vim.cmd
-local tree = require "neo-tree"
+local tree = require("neo-tree")
 
 fn.sign_define("DiagnosticSignError", { text = " ", texthl = "DiagnosticSignError" })
 fn.sign_define("DiagnosticSignWarn", { text = " ", texthl = "DiagnosticSignWarn" })
 fn.sign_define("DiagnosticSignInfo", { text = " ", texthl = "DiagnosticSignInfo" })
 fn.sign_define("DiagnosticSignHint", { text = "󰌵 ", texthl = "DiagnosticSignHint" })
 
-tree.setup {
-	close_if_last_window = true,
+tree.setup({
+	close_if_last_window = false,
 	popup_border_style = "rounded",
 	enable_git_status = true,
 	enable_diagnostics = true,
@@ -100,12 +100,12 @@ tree.setup {
 
 		type = {
 			enabled = true,
-			--required_width = 122,
+			required_width = 120,
 		},
 
 		last_modified = {
 			enabled = true,
-			--required_width = 88,
+			required_width = 64,
 		},
 
 		created = {
@@ -123,8 +123,9 @@ tree.setup {
 	-- See `:help neo-tree-custom-commands-global`.
 	commands = {},
 
+	-- Main Window
 	window = {
-		position = "right",
+		position = "left",
 		width = 40,
 
 		mapping_options = {
@@ -216,10 +217,10 @@ tree.setup {
 				["oc"] = { "order_by_created", nowait = false },
 				["od"] = { "order_by_diagnostics", nowait = false },
 				["og"] = { "order_by_git_status", nowait = false },
-			        ["om"] = { "order_by_modified", nowait = false },
-			        ["on"] = { "order_by_name", nowait = false },
-  				["os"] = { "order_by_size", nowait = false },
-		      		["ot"] = { "order_by_type", nowait = false },
+				["om"] = { "order_by_modified", nowait = false },
+				["on"] = { "order_by_name", nowait = false },
+				["os"] = { "order_by_size", nowait = false },
+				["ot"] = { "order_by_type", nowait = false },
 			},
 
 			fuzzy_finder_mappings = {
@@ -232,7 +233,7 @@ tree.setup {
 	},
 
 	buffers = {
-		-- Find and focus the file in active buffer every time the current file is changed while the tree is open.	
+		-- Find and focus the file in active buffer every time the current file is changed while the tree is open.
 		follow_current_file = {
 			enabled = true,
 			leave_dirs_open = false, -- `false` closes auto-expanded dirs.
@@ -241,12 +242,13 @@ tree.setup {
 		group_empty_dirs = true,
 		show_unloaded = true,
 		window = {
+			position = "top",
 			mappings = {
 				["bd"] = "buffer_delete",
 				["<bs>"] = "navigate_up",
 				["."] = "set_root",
 
-				["o"] = { "show_help", nowait=false, config = { title = "Order by", prefix_key = "o" }},
+				["o"] = { "show_help", nowait = false, config = { title = "Order by", prefix_key = "o" } },
 				["oc"] = { "order_by_created", nowait = false },
 				["od"] = { "order_by_diagnostics", nowait = false },
 				["om"] = { "order_by_modified", nowait = false },
@@ -258,28 +260,28 @@ tree.setup {
 	},
 
 	git_status = {
-	    window = {
-		position = "float",
-		mappings = {
-		  ["A"]  = "git_add_all",
-		  ["gu"] = "git_unstage_file",
-		  ["ga"] = "git_add_file",
-		  ["gr"] = "git_revert_file",
-		  ["gc"] = "git_commit",
-		  ["gp"] = "git_push",
-		  ["gg"] = "git_commit_and_push",
+		window = {
+			position = "float",
+			mappings = {
+				["A"] = "git_add_all",
+				["gu"] = "git_unstage_file",
+				["ga"] = "git_add_file",
+				["gr"] = "git_revert_file",
+				["gc"] = "git_commit",
+				["gp"] = "git_push",
+				["gg"] = "git_commit_and_push",
 
-		  ["o"] = { "show_help", nowait=false, config = { title = "Order by", prefix_key = "o" }},
-		  ["oc"] = { "order_by_created", nowait = false },
-		  ["od"] = { "order_by_diagnostics", nowait = false },
-		  ["om"] = { "order_by_modified", nowait = false },
-		  ["on"] = { "order_by_name", nowait = false },
-		  ["os"] = { "order_by_size", nowait = false },
-		  ["ot"] = { "order_by_type", nowait = false },
+				["o"] = { "show_help", nowait = false, config = { title = "Order by", prefix_key = "o" } },
+				["oc"] = { "order_by_created", nowait = false },
+				["od"] = { "order_by_diagnostics", nowait = false },
+				["om"] = { "order_by_modified", nowait = false },
+				["on"] = { "order_by_name", nowait = false },
+				["os"] = { "order_by_size", nowait = false },
+				["ot"] = { "order_by_type", nowait = false },
+			},
 		},
-	    },
 	},
-}
+})
 
 -- Setup keybinds and reveal neotree
-cmd [[ nnoremap \ :Neotree reveal<cr> ]]
+cmd([[ nnoremap \ :Neotree reveal<cr> ]])
