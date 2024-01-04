@@ -8,9 +8,9 @@ export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-    export EDITOR="neovim"
+    export EDITOR="nvim"
 else
-    export EDITOR="neovim"
+    export EDITOR="nvim"
 fi
 
 # NVM (Node Version Manager)
