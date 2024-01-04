@@ -1,6 +1,4 @@
 {
-    // Online Services
-    "git.autofetch": "all",
     "workbench.enableExperiments": false,
 
     // Theme / Fonts
@@ -9,19 +7,21 @@
     "window.enableMenuBarMnemonics": false,
     "workbench.iconTheme": "vscode-icons",
     "editor.fontSize": 18,
+    "terminal.integrated.fontSize": 18,
     "editor.fontFamily": "'0xProto', 'Comic Sans'",
     "terminal.integrated.cursorStyle": "underline",
     "terminal.integrated.cursorStyleInactive": "underline",
     "workbench.editor.labelFormat": "medium",
-    "workbench.colorTheme": "Tokyo Night",
-    "explorer.fileNesting.enabled": true,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "terminal.integrated.smoothScrolling": true,
+    "workbench.list.smoothScrolling": true,
+    "editor.smoothScrolling": true,
 
     // Misc
     "vscord.app.name": "VSCodium",
     "vsicons.dontShowNewVersionMessage": true,
     "mesonbuild.downloadLanguageServer": true,
     "editor.linkedEditing": true,
-    "git.enableSmartCommit": true,
 
     // Formatting Stuff
     // https://github.com/flerouwu/prettier-config
@@ -52,6 +52,13 @@
             "editor.action.formatDocument",
             "editor.action.organizeImports"
         ]
+    },
+
+    // File Associations
+    "files.associations": {
+        // Better PKGBUILD shellcheck integration.
+        // Extension: "claui.packaging"
+        "PKGBUILD": "aur-pkgbuild"
     },
 
     // Cascading Style Sheet (*.css)
@@ -101,6 +108,11 @@
 
     // Markdown (*.md)
     "[markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    // Vue (*.vue)
+    "[vue]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
 }

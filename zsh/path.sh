@@ -17,3 +17,6 @@ export PATH="$PATH:$BUN_INSTALL/bin"
 
 # rbenv (Ruby)
 eval "$(rbenv init - zsh)"
+
+# Add .NET Core SDK tools
+export PATH="$PATH:/home/flero/.dotnet/tools"
